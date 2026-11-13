@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-ZRbfJ/91CMoNvY16phqtpxqzsHRqjoamVPRL7YMypP4='; style-src 'sha256-P1YuiYI69P+OQCfgngj6KY+To03zobGl959l1eiBZ7k='; img-src data:; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-oQx20nDmCSfebJaLJJKlxoSaL+uMqtKrr3eh7iaqd2Q='; style-src 'sha256-ZfVYekevDI5lHjYfMykSKTfmtDPSRzNhcAHgClqE/eg='; script-src-attr 'none'; style-src-attr 'none'; img-src data:; connect-src 'none'; frame-src 'none'; object-src 'none'; worker-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Explora el catálogo de Variedades Shaddai en Choluteca, Honduras. Sublimación, tecnología, hogar, cuidado personal, moda y accesorios.">
@@ -17,6 +17,11 @@
       --muted: #6d5b61;
       --plum: #703a53;
       --plum-dark: #55273d;
+      --gold: #e1b657;
+      --gold-light: #f8e3a3;
+      --gold-border: #b88f456b;
+      --gold-glass: #f8e3a35c;
+      --gold-button: linear-gradient(180deg, var(--gold-light), var(--gold));
       --blush: #f3e4e3;
       --line: #e9ddd9;
       --serif: Georgia, 'Times New Roman', serif;
@@ -28,7 +33,19 @@
 
     *, *::before, *::after { box-sizing: border-box; }
     [hidden] { display: none !important; }
-    body { margin: 0; background: var(--paper); color: var(--ink); }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background-color: var(--paper);
+      background-image:
+        url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22432%22%20viewBox%3D%220%200%20640%20432%22%3E%3Cg%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20fill-opacity%3D%22.22%22%20opacity%3D%22.34%22%3E%3Cg%20transform%3D%22translate(42%2057)%20rotate(-16%2032%2024)%22%20fill%3D%22%23ad8ab4%22%20stroke%3D%22%23ad8ab4%22%3E%3Cpath%20d%3D%22M18%2014h28c7%200%2012%205%2014%2012l3%2012c2%208-5%2013-10%207l-8-8H19l-8%208c-5%206-12%201-10-7l3-12c2-7%207-12%2014-12Z%22%2F%3E%3Cpath%20d%3D%22M16%2021v12m-6-6h12%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2246%22%20cy%3D%2223%22%20r%3D%221.2%22%2F%3E%3Ccircle%20cx%3D%2251%22%20cy%3D%2229%22%20r%3D%221.2%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate(241%2028)%20rotate(13%2030%2026)%22%20fill%3D%22%23c18193%22%20stroke%3D%22%23c18193%22%3E%3Cpath%20d%3D%22M20%207%209%2010%200%2023l12%208%206-6v27h26V25l6%206%2012-8-9-13-11-3c-1%206-5%209-11%209S21%2013%2020%207Z%22%2F%3E%3Cpath%20d%3D%22M20%207c4%204%2017%204%2022%200%22%20fill%3D%22none%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate(471%2058)%20rotate(-10%2030%2024)%22%20fill%3D%22%23ad8858%22%20stroke%3D%22%23ad8858%22%3E%3Cpath%20d%3D%22M10%2017h40l6%2030c.5%202.5-1%204-4%204H8c-3%200-4.5-1.5-4-4Z%22%2F%3E%3Cpath%20d%3D%22M20%2018V12a10%2010%200%200%201%2020%200v6m-23%208h26%22%20fill%3D%22none%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate(150%20185)%20rotate(-13%2023%2032)%22%20fill%3D%22%2367937f%22%20stroke%3D%22%2367937f%22%3E%3Cpath%20d%3D%22M5%2016h30l-4%2041c-.2%202-2%203-4%203H13c-2%200-3.5-1-4-3Z%22%2F%3E%3Cpath%20d%3D%22M3%2016h34M23%2015l3-13h8m0%2021h7a4%204%200%200%201%204%204v9a4%204%200%200%201-4%204h-8%22%20fill%3D%22none%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate(362%20162)%20rotate(12%2026%2030)%22%20fill%3D%22%23bd826e%22%20stroke%3D%22%23bd826e%22%3E%3Cpath%20d%3D%22M5%2021h33v20c0%209-6%2014-16.5%2014S5%2050%205%2041Z%22%2F%3E%3Cpath%20d%3D%22M38%2025h6a7%207%200%200%201%200%2014h-6M13%2014c-5-5%205-7%200-12m10%2012c-5-5%205-7%200-12%22%20fill%3D%22none%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate(60%20331)%20rotate(11%2029%2024)%22%20fill%3D%22%237f9f8b%22%20stroke%3D%22%237f9f8b%22%3E%3Cpath%20d%3D%22M12%2012h46l-6%2019H19Z%22%2F%3E%3Cpath%20d%3D%22M1%205h9l10%2034h31m-32-18h35%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2247%22%20r%3D%223.5%22%2F%3E%3Ccircle%20cx%3D%2247%22%20cy%3D%2247%22%20r%3D%223.5%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate(413%20326)%20rotate(-14%2032%2025)%22%20fill%3D%22%23ad8ab4%22%20stroke%3D%22%23ad8ab4%22%3E%3Cpath%20d%3D%22M5%2032C5%2015%2016%206%2029%206c14%200%2024%2011%2024%2025v5H6Z%22%2F%3E%3Cpath%20d%3D%22M27%2032c5-1%2014-1%2024%201%209%202%2013%206%2010%209-4%204-15%201-24-2l-13-5Z%22%2F%3E%3Cpath%20d%3D%22M28%208c-6%205-8%2014-8%2024%22%20fill%3D%22none%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
+        radial-gradient(ellipse at 7% 10%, #f1dce7, transparent 60%),
+        radial-gradient(ellipse at 92% 50%, #dfeadf, transparent 64%),
+        radial-gradient(ellipse at 36% 91%, #f4e5cd, transparent 62%);
+      background-repeat: repeat;
+      background-position: center top, left top, right top, center top;
+      background-size: 640px 432px, 100% 980px, 100% 1280px, 100% 1120px;
+    }
     h1, h2, h3, h4, p { margin: 0; }
     h1, h2 { font-family: var(--serif); font-weight: 400; line-height: 1.05; }
     h2 { font-size: clamp(1.85rem, 3.7vw, 2.65rem); }
@@ -40,13 +57,23 @@
     :where(section, article)[id] { scroll-margin-top: 24px; }
 
     .shell { width: min(100%, 1280px); margin-inline: auto; padding-inline: var(--gutter); }
-    .skip { position: fixed; z-index: 2; inset: 12px auto auto 12px; transform: translateY(-160%); }
+    .skip { position: fixed; z-index: 5; inset: 12px auto auto 12px; transform: translateY(-160%); }
     .skip:focus { transform: translateY(0); }
 
-    .site-header { border-bottom: 1px solid var(--line); }
+    .site-header {
+      position: relative;
+      z-index: 4;
+      color: #fffaf4;
+      background: linear-gradient(115deg, #49323ddd, #623b50d9 66%, #48323ddd);
+      border-bottom: 1px solid #e1b65799;
+      box-shadow: 0 3px 14px #3e26351a;
+      -webkit-backdrop-filter: blur(12px) saturate(1.15);
+      backdrop-filter: blur(12px) saturate(1.15);
+    }
     .holiday-garland {
       height: 26px;
-      background: #f4eee6 var(--holiday-sprigs) repeat-x center top / 120px 26px;
+      background: #f4eee6 var(--holiday-decoration, var(--holiday-sprigs)) repeat-x
+        calc(50% + var(--holiday-shift, 0px)) top / var(--holiday-width, 128px) 26px;
       border-bottom: 1px solid #e7ddd2;
     }
     .brand-signature { display: grid; gap: 3px; }
@@ -59,31 +86,51 @@
       pointer-events: none;
     }
 
-    :where(.hero, .feature, .category-link, .info-panel, .product, .catalog-header) { position: relative; }
-    :where(.hero, .feature, .category-link, .info-panel, .product, .catalog-header)::before {
+    :where(.hero, .feature, .category-link, .info-panel, .product, .catalog-header, .benefit, .home-guide, .order-steps li) { position: relative; }
+    :where(.hero, .feature, .category-link, .info-panel, .product, .catalog-header, .benefit, .home-guide, .order-steps li)::before {
       content: "";
       position: absolute;
       inset: 0 1px auto;
       height: 24px;
       border-radius: inherit;
-      background: var(--holiday-sprigs) repeat-x center top / 108px 24px;
+      background: var(--holiday-decoration, var(--holiday-sprigs)) repeat-x
+        calc(50% + var(--holiday-shift, 0px)) top / calc(var(--holiday-width, 128px) * .92) 24px;
       pointer-events: none;
     }
     .hero::before, .feature::before { inset-inline: 0; }
-    .topbar { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 24px; min-height: 76px; }
+    .topbar { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 18px; min-height: 76px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; width: fit-content; }
     .monogram { display: grid; place-items: center; width: 39px; height: 39px; flex: none; border-radius: 11px; background: var(--plum); color: white; font: italic 1.4rem/1 var(--serif); letter-spacing: -.04em; }
     .brand-name { font: 1.38rem/1.15 var(--serif); letter-spacing: -.035em; }
-    .site-nav { display: flex; align-items: center; gap: clamp(16px, 3vw, 35px); }
-    .site-nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: .89rem; color: var(--muted); }
-    .site-nav a:hover, .site-nav a[aria-current] { color: var(--plum); }
-    .site-nav a[aria-current] { text-decoration: underline; text-underline-offset: 6px; }
-    .topbar > .button { justify-self: end; white-space: nowrap; }
+    .site-nav { display: flex; justify-content: center; align-items: center; gap: 4px; }
+    .site-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 6px clamp(6px, .8vw, 12px);
+      border: 1px solid transparent;
+      border-radius: 999px;
+      color: #fffaf4;
+      font-size: .84rem;
+      line-height: 1.2;
+      text-align: center;
+    }
+    .site-nav a:hover { background: #fff8eb17; }
+    .site-nav a[aria-current] {
+      background: linear-gradient(145deg, #fff8eb45, #e1b65722);
+      border-color: #f8e3a357;
+      box-shadow: inset 0 1px 0 #fffaf443, 0 2px 8px #2e1d331f;
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+    }
+    .site-header :focus-visible { outline-color: var(--gold-light); }
+    .topbar > .button { justify-self: end; white-space: nowrap; border-color: #fff4cc65; }
 
-    .button { display: inline-flex; justify-content: center; align-items: center; gap: 9px; min-height: 45px; padding: 9px 19px; border: 1px solid transparent; border-radius: 999px; background: var(--plum); color: white; font-size: .88rem; font-weight: 650; text-align: center; }
-    .button:hover { background: var(--plum-dark); }
-    .button-outline { background: transparent; color: var(--plum-dark); border-color: #ba9da9; }
-    .button-outline:hover { background: #f2e3e7; }
+    .button { display: inline-flex; justify-content: center; align-items: center; gap: 9px; min-height: 45px; padding: 9px 19px; border: 1px solid transparent; border-radius: 999px; background: var(--gold-button); color: #36291c; font-size: .88rem; font-weight: 650; text-align: center; }
+    .button:hover { background: linear-gradient(180deg, #ffedb7, #ecc572); }
+    .button-outline { background: #fff8e86b; color: var(--plum-dark); border-color: var(--gold-border); }
+    .button-outline:hover { background: var(--gold-glass); }
 
     .hero { display: grid; grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); margin-top: 28px; padding-top: 24px; overflow: hidden; border-radius: 28px; background: var(--blush); }
     .hero-copy { align-self: center; padding: clamp(30px, 4.75vw, 68px); }
@@ -99,7 +146,7 @@
     .showcase { margin-top: clamp(33px, 4vw, 53px); }
     .controls { display: flex; align-items: center; flex: none; gap: 8px; }
     .control { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-width: 44px; min-height: 44px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--white); font-size: 1.05rem; cursor: pointer; }
-    .control:hover:not(:disabled) { background: var(--blush); border-color: #ceb8be; }
+    .control:hover:not(:disabled) { background: var(--gold-glass); border-color: var(--gold-border); }
     .control:disabled { opacity: .45; cursor: default; }
     .toggle { color: var(--plum-dark); font-size: .8rem; }
     .toggle-icon { width: 9px; height: 12px; border-inline: 2px solid currentColor; }
@@ -120,11 +167,9 @@
     .category-link:hover { border-color: #b497a4; background: #fcf1ee; }
     .category-link strong { font-size: .98rem; }
     .category-link span { overflow-wrap: anywhere; display: flex; justify-content: space-between; gap: 6px; color: var(--muted); font-size: .78rem; line-height: 1.35; }
-    .category-link b { color: var(--plum); font-size: 1rem; font-weight: 400; }
+    .category-link b { color: #8a6124; font-size: 1rem; font-weight: 400; }
 
-    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: clamp(45px, 7vw, 83px); }
     .info-panel { display: flex; flex-direction: column; align-items: start; justify-content: space-between; gap: 18px; padding: clamp(36px, 5vw, 50px) clamp(23px, 4vw, 40px) clamp(23px, 4vw, 40px); border: 1px solid var(--line); border-radius: 22px; background: #f5ebe6; }
-    .info-panel + .info-panel { background: #efeae2; }
     .info-panel h2 { font-size: clamp(1.6rem, 3vw, 2.15rem); }
     .info-panel p { margin-top: 10px; max-width: 45ch; font-size: .95rem; }
 
@@ -145,7 +190,7 @@
     .product p { font-size: .92rem; }
     .product .button { margin-top: auto; max-width: 100%; }
 
-    .site-footer { border-top: 1px solid var(--line); background: #f2ebe7; }
+    .site-footer { border-top: 1px solid var(--line); background: linear-gradient(120deg, #f2ebe7, #f8e3a366); }
     .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 26px; }
     .footer-row p { margin-top: 7px; font-size: .82rem; }
     .footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 8px; }
@@ -160,13 +205,13 @@
     .product .reference { color: var(--muted); font-size: .74rem; }
     .footer-brand img { width: 115px; height: auto; border-radius: 10px; }
     .footer-links .social-link { gap: 7px; padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--white); }
-    .social-link svg { flex: none; width: 17px; height: 17px; fill: currentColor; }
+    .social-link > svg:first-child { flex: none; width: 17px; height: 17px; fill: currentColor; }
     .facebook svg { color: #0866ff; }
     .instagram svg { color: #bd2460; }
     .tiktok svg { color: #16141b; }
     .whatsapp svg { color: #16844b; }
 
-    :where(.button, .control, .social-link, .category-link, .feature, .product, .info-panel, .catalog-header) {
+    :where(.site-nav a, .button, .control, .social-link, .category-link, .feature, .product, .info-panel, .catalog-header) {
       position: relative;
     }
 
@@ -178,6 +223,7 @@
       height: 100%;
       pointer-events: none;
       fill: none;
+      --gold-draw-time: 560ms;
     }
     .gold-outline path {
       stroke-width: 2.25px;
@@ -185,23 +231,41 @@
     }
     .gold-outline-line {
       stroke: #ffdc38;
-      animation: draw-gold-outline 560ms linear both;
+      animation: draw-gold-outline var(--gold-draw-time) linear both;
+    }
+    .gold-outline :is(.gold-outline-tip, .gold-outline-orbit) {
+      stroke: #fff989;
+      stroke-width: 3.2px;
+      stroke-linecap: round;
+      filter: drop-shadow(0 0 1px #96620c);
     }
     .gold-outline-tip {
-      stroke: #fff47a;
-      stroke-linecap: round;
-      stroke-dasharray: 8 92;
-      animation: travel-gold-tip 560ms linear both;
+      stroke-dasharray: 24px 100px;
+      animation:
+        meet-gold-tips var(--gold-draw-time) linear both,
+        hide-gold-tips 0s var(--gold-draw-time) forwards;
     }
+    .gold-outline-orbit {
+      stroke-dasharray: 12px 38px;
+      visibility: hidden;
+      animation:
+        show-gold-orbit 0s var(--gold-draw-time) forwards,
+        rotate-gold-orbit 1s linear var(--gold-draw-time) infinite;
+    }
+    @keyframes meet-gold-tips {
+      from { stroke-dashoffset: 24px; }
+      to { stroke-dashoffset: -76px; }
+    }
+    @keyframes hide-gold-tips { to { visibility: hidden; } }
+    @keyframes show-gold-orbit { to { visibility: visible; } }
+    @keyframes rotate-gold-orbit {
+      from { stroke-dashoffset: 6px; }
+      to { stroke-dashoffset: -44px; }
+    }
+
     @keyframes draw-gold-outline {
       from { stroke-dasharray: 0 50 0 100; }
       to { stroke-dasharray: 0 0 100 100; }
-    }
-    @keyframes travel-gold-tip {
-      0% { stroke-dashoffset: 58; opacity: 0; }
-      10% { opacity: 1; }
-      94% { opacity: 1; }
-      100% { stroke-dashoffset: 8; opacity: 0; }
     }
 
     @media (max-width: 980px) {
@@ -211,9 +275,6 @@
 
     @media (max-width: 760px) {
       :root { --card-gap: 12px; }
-      .topbar { grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; padding-top: 10px; }
-      .site-nav { grid-area: 2 / 1 / 3 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2px; }
-      .site-nav a { justify-content: center; min-height: 48px; }
       .brand { gap: 8px; }
       .brand-sleigh { width: 98px; height: 22px; }
       .brand-name { font-size: clamp(1.08rem, 4.2vw, 1.25rem); }
@@ -227,7 +288,6 @@
       .track { grid-auto-columns: calc((100% - var(--card-gap)) / 2); }
       .category-grid, .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .category-link { min-height: 110px; padding: 29px 14px 14px; }
-      .info-grid { grid-template-columns: minmax(0, 1fr); }
       .footer-row { align-items: start; flex-direction: column; gap: 16px; }
       .footer-links { justify-content: flex-start; }
     }
@@ -243,6 +303,165 @@
       .footer-links .social-link { justify-content: center; text-align: center; }
       .footer-links .whatsapp { grid-column: 1 / -1; }
     }
+    .header-brand { min-width: 0; max-width: 100%; }
+    .header-brand .monogram { width: auto; height: auto; background: transparent; color: var(--gold-light); }
+    .header-brand .brand-name { font-weight: 700; line-height: 1.06; }
+    .header-brand .brand-name span, .header-brand .brand-sleigh { color: var(--gold); }
+    .header-brand .brand-signature { min-width: 0; }
+    .header-brand .brand-sleigh { max-width: 100%; }
+
+    .home-section-title { margin-bottom: 22px; }
+    .home-intro {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      align-items: start;
+      gap: clamp(18px, 4vw, 64px);
+    }
+    .home-intro h2 { max-width: 19ch; font-size: clamp(2rem, 4vw, 3.5rem); }
+    .home-intro h2 em { color: var(--plum); }
+    .home-intro p, .guide-copy p { max-width: 65ch; }
+    .home-intro p + p { margin-top: 12px; }
+    .benefits-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .benefit, .order-steps li {
+      padding: 32px clamp(14px, 2.25vw, 26px) 20px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: var(--white);
+    }
+    :is(.benefit, .order-steps li, .personalize-options li) h3 {
+      margin-bottom: 5px;
+      font: 700 clamp(1.05rem, 2vw, 1.3rem)/1.18 var(--serif);
+    }
+    :is(.benefit, .order-steps li, .personalize-options li) p { font-size: .92rem; }
+
+    .home-shipping { flex-direction: row; align-items: center; background: #efeae2; }
+    .home-shipping .button { flex: none; }
+    .home-shipping p, .home-personalize p { max-width: 62ch; }
+
+    .home-guides { display: grid; gap: 17px; }
+    .home-guide {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr);
+      grid-template-areas: "photo copy";
+      padding-top: 24px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--white);
+    }
+    .home-guide:nth-child(even) {
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, .8fr);
+      grid-template-areas: "copy photo";
+    }
+    .guide-photo {
+      grid-area: photo;
+      position: relative;
+      display: grid;
+      place-items: end start;
+      min-height: 210px;
+      padding: 14px;
+      isolation: isolate;
+      background: #e6dcd0;
+    }
+    .guide-photo:focus-visible { outline-offset: -4px; z-index: 1; }
+    .guide-photo img { position: absolute; inset: 0; height: 100%; object-fit: cover; z-index: -1; }
+    .guide-label {
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--plum-dark);
+      font-size: .85rem;
+      font-weight: 700;
+    }
+    .guide-copy { grid-area: copy; align-self: center; padding: clamp(18px, 3.6vw, 38px); }
+    .guide-copy h3 { font: italic 400 clamp(1.48rem, 3vw, 2.15rem)/1.14 var(--serif); }
+    .guide-copy p { margin: 9px 0 14px; }
+    .guide-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 16px; padding: 0; list-style: none; }
+    .guide-tags li { padding: 3px 9px; border-radius: 999px; background: var(--gold-glass); color: var(--plum-dark); font-size: .78rem; }
+
+    .home-personalize { background: #f1e5e7; }
+    .personalize-options, .order-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .personalize-options { width: 100%; }
+    .personalize-options li { padding-top: 10px; border-top: 2px solid var(--gold); }
+    .personalize-options p { margin: 0; }
+    .home-help { align-items: center; margin-bottom: clamp(40px, 7vw, 80px); text-align: center; background: #f5ead7; }
+
+    .home-chat {
+      position: fixed;
+      inset: auto max(16px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) auto;
+      z-index: 3;
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      background: #22764e;
+      color: #fff;
+      box-shadow: 0 3px 12px #30242925;
+    }
+    .home-chat:hover { background: #195e3d; }
+    @media (min-width: 481px) and (max-width: 1380px) {
+      .showcase .section-head { padding-inline-end: 58px; }
+    }
+    .home-chat svg:not(.gold-outline) { width: 23px; height: 23px; fill: currentColor; }
+
+    @media (max-width: 760px) {
+      .home-intro { grid-template-columns: minmax(0, 1fr); }
+      .benefits-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .home-shipping { flex-direction: column; align-items: start; }
+      .home-guide, .home-guide:nth-child(even) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "photo" "copy";
+      }
+      .guide-photo { min-height: clamp(148px, 43vw, 240px); }
+    }
+    @media (max-width: 520px) {
+      .personalize-options, .order-steps { grid-template-columns: minmax(0, 1fr); }
+      .header-brand .brand-name { font-size: clamp(.94rem, 4.2vw, 1.16rem); }
+    }
+
+    /* Translucent panels let the pattern show through the surface. */
+    :is(.hero, .catalog-header, .category-link, .feature, .product, .info-panel, .home-guide, .benefit, .order-steps li) {
+      background: linear-gradient(145deg, #ffffffac, #fff2d474 75%);
+      border: 1px solid #fff9;
+      box-shadow: inset 0 1px 1px #fff9, inset 0 -1px 0 #886b8026, 0 5px 16px #3e2c3910;
+    }
+    :is(.hero, .catalog-header) { background: linear-gradient(125deg, #fff5f8a3, #fff0c67d); }
+    .home-shipping { background: linear-gradient(135deg, #f7fffac2, #eaf3eb63); }
+    .home-personalize { background: linear-gradient(135deg, #fff8fbc9, #f3e1eb6e); }
+    .home-help { background: linear-gradient(135deg, #fffdf3bd, #ffefce75); }
+    .category-link:hover, .product:target {
+      background: linear-gradient(145deg, #fff7e4d4, #f8e3a37a);
+      border-color: var(--gold-border);
+    }
+    .feature:hover { border-color: var(--gold-border); }
+    :is(.hero-photo, .guide-photo, .feature img, .product-media) { background-color: #eee3dc88; }
+    @supports ((backdrop-filter: blur(3px)) or (-webkit-backdrop-filter: blur(3px))) {
+      :is(.hero, .catalog-header, .info-panel, .home-guide) {
+        -webkit-backdrop-filter: blur(3px) saturate(1.08);
+        backdrop-filter: blur(3px) saturate(1.08);
+      }
+    }
+    @media (max-width: 760px) {
+      body { background-size: 410px 277px, 100% 900px, 100% 1100px, 100% 950px; }
+    }
+    @media (min-width: 1101px) {
+      html { scroll-padding-top: 104px; }
+      .site-header { position: sticky; top: 0; }
+    }
+    @media (max-width: 1100px) {
+      .topbar { grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; padding-block: 8px; }
+      .site-nav { grid-area: 2 / 1 / 3 / -1; flex-wrap: wrap; }
+    }
+    @media (max-width: 620px) {
+      .site-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px 2px; }
+      .site-nav a { padding-inline: 3px; font-size: .77rem; }
+    }
   </style>
 </head>
 <body>
@@ -250,7 +469,7 @@
   <header class="site-header">
     <div class="holiday-garland" aria-hidden="true"></div>
     <div class="shell topbar">
-      <a class="brand" href="#inicio">
+      <a class="brand header-brand" href="#inicio">
         <span class="monogram" aria-hidden="true">VS</span>
         <span class="brand-signature">
           <svg class="brand-sleigh" viewBox="0 0 120 28" fill="currentColor" aria-hidden="true" focusable="false">
@@ -271,16 +490,20 @@
             <use href="#sleigh-reindeer" x="64" y="5"/>
             <use href="#sleigh-reindeer" x="91" y="2"/>
           </svg>
-          <span class="brand-name">Variedades Shaddai</span>
+          <span class="brand-name">Variedades <span>Shaddai</span></span>
         </span>
       </a>
       <nav class="site-nav" aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#catalogo">Catálogo</a>
+        <a href="#inicio" aria-current="page">Inicio</a>
+        <a href="#sublimacion">Sublimación</a>
+        <a href="#tecnologia">Tecnología</a>
+        <a href="#hogar">Hogar</a>
+        <a href="#cuidado-personal">Cuidado personal</a>
         <a href="#moda">Moda</a>
+        <a href="#accesorios">Accesorios</a>
         <a href="#envios">Envíos</a>
       </nav>
-      <a class="button button-outline" href="https://wa.me/50497479719" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
+      <a class="button" href="https://wa.me/50497479719" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
@@ -322,22 +545,159 @@
         </div>
       </section>
 
-      <div class="section info-grid">
-        <section class="info-panel" aria-labelledby="design-title">
-          <div>
-            <h2 id="design-title">Personaliza tu regalo</h2>
-            <p>Estampamos tu foto, logo o frase en camisas, tazas y termos. También podemos diseñarlo contigo.</p>
-          </div>
-          <a class="button button-outline" href="https://wa.me/50497479719?text=Hola%2C%20quiero%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer">Consultar personalización <span aria-hidden="true">↗</span></a>
-        </section>
-        <section class="info-panel" id="envios" aria-labelledby="shipping-title">
-          <div>
-            <h2 id="shipping-title" tabindex="-1">Envíos a todo Honduras</h2>
-            <p>Estamos en Choluteca. Escríbenos para consultar precios y disponibilidad o coordinar un envío a tu ciudad.</p>
-          </div>
-          <a class="button button-outline" href="https://wa.me/50497479719?text=Hola%2C%20quiero%20consultar%20sobre%20env%C3%ADos%20a%20mi%20ciudad" target="_blank" rel="noopener noreferrer">Preguntar por envíos <span aria-hidden="true">↗</span></a>
-        </section>
-      </div>
+      <section class="section home-intro" aria-labelledby="home-intro-title">
+        <h2 id="home-intro-title">Un solo lugar para <em>personalizar, estrenar y consentirte</em></h2>
+        <div>
+          <p>En Variedades Shaddai convertimos tus ideas en regalos únicos. Estampamos camisas, tazas y termos con tu diseño, tu foto o tu frase favorita. Puedes celebrar una fecha especial o darle identidad a tu negocio o a tu equipo.</p>
+          <p>En la tienda también encuentras tecnología, productos para el hogar, ropa, gorras, accesorios, maquillaje y perfumes.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="benefits-title">
+        <h2 id="benefits-title" class="home-section-title">Lo que encuentras en Shaddai</h2>
+        <div class="benefits-grid">
+          <article class="benefit"><h3>Precios accesibles</h3><p>Explora opciones para distintos presupuestos.</p></article>
+          <article class="benefit"><h3>Atención personalizada</h3><p>Resolvemos tus dudas directamente por WhatsApp.</p></article>
+          <article class="benefit"><h3>Hecho a tu gusto</h3><p>Estampamos tu diseño en el producto que elijas.</p></article>
+          <article class="benefit"><h3>Todo en un solo lugar</h3><p>Encuentra regalos y productos para el día a día.</p></article>
+        </div>
+      </section>
+
+      <section class="section info-panel home-shipping" id="envios" aria-labelledby="shipping-title">
+        <div>
+          <h2 id="shipping-title" tabindex="-1">Estamos en Choluteca y enviamos a todo Honduras</h2>
+          <p>Escríbenos para confirmar disponibilidad, consultar el costo de envío a tu ciudad y coordinar la entrega de tu pedido.</p>
+        </div>
+        <a class="button button-outline" href="https://wa.me/50497479719?text=Hola%2C%20quiero%20consultar%20sobre%20env%C3%ADos%20a%20mi%20ciudad" target="_blank" rel="noopener noreferrer">Preguntar por envíos <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <section class="section" aria-labelledby="home-guides-title">
+        <h2 id="home-guides-title" class="home-section-title">Cuéntanos qué necesitas</h2>
+        <div class="home-guides">
+          <article class="home-guide" aria-labelledby="guide-sublimacion-title">
+            <a class="guide-photo" href="#sublimacion" data-guide-photo="producto-pos-356" aria-label="Ver catálogo de Sublimación">
+              <span class="guide-label">Sublimación</span>
+            </a>
+            <div class="guide-copy">
+              <h3 id="guide-sublimacion-title">¿Quieres un regalo que nadie más tenga?</h3>
+              <p>Una taza con la foto de tu familia, una camisa para tu equipo o un termo con tu nombre. Personaliza un detalle para cumpleaños, aniversarios, negocios y eventos.</p>
+              <ul class="guide-tags" aria-label="Tipos de productos">
+                <li>Tazas</li>
+                <li>Termos</li>
+                <li>Llaveros</li>
+              </ul>
+              <a class="button button-outline" href="#sublimacion">Explorar Sublimación <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="home-guide" aria-labelledby="guide-tecnologia-title">
+            <a class="guide-photo" href="#tecnologia" data-guide-photo="producto-pos-27" aria-label="Ver catálogo de Tecnología">
+              <span class="guide-label">Tecnología</span>
+            </a>
+            <div class="guide-copy">
+              <h3 id="guide-tecnologia-title">¿Necesitas mantenerte comunicado?</h3>
+              <p>Encuentra celulares para trabajar o estar cerca de los tuyos, tablets para estudiar y entretenerte, y accesorios para cargar tus equipos donde estés.</p>
+              <ul class="guide-tags" aria-label="Tipos de productos">
+                <li>Celulares</li>
+                <li>Tablets</li>
+                <li>Cargadores</li>
+                <li>Baterías portátiles</li>
+              </ul>
+              <a class="button button-outline" href="#tecnologia">Explorar Tecnología <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="home-guide" aria-labelledby="guide-hogar-title">
+            <a class="guide-photo" href="#hogar" data-guide-photo="producto-pos-302" aria-label="Ver catálogo de Hogar">
+              <span class="guide-label">Hogar</span>
+            </a>
+            <div class="guide-copy">
+              <h3 id="guide-hogar-title">¿Quieres que tu casa se sienta más tuya?</h3>
+              <p>Termos para el día a día, juguetes para los más pequeños y artículos para preparar tus reuniones. Encuentra ese detalle que le hacía falta a tu casa.</p>
+              <ul class="guide-tags" aria-label="Tipos de productos">
+                <li>Termos</li>
+                <li>Juguetes</li>
+                <li>Artículos para el hogar</li>
+              </ul>
+              <a class="button button-outline" href="#hogar">Explorar Hogar <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="home-guide" aria-labelledby="guide-cuidado-personal-title">
+            <a class="guide-photo" href="#cuidado-personal" data-guide-photo="producto-pos-208" aria-label="Ver catálogo de Cuidado personal">
+              <span class="guide-label">Cuidado personal</span>
+            </a>
+            <div class="guide-copy">
+              <h3 id="guide-cuidado-personal-title">¿Quieres verte y sentirte increíble?</h3>
+              <p>Maquillaje para el look del día, cremas para tu rutina y fragancias para cualquier ocasión. Date un gusto o encuentra un regalo.</p>
+              <ul class="guide-tags" aria-label="Tipos de productos">
+                <li>Cremas</li>
+                <li>Maquillaje</li>
+                <li>Perfumes</li>
+                <li>Cuidado facial</li>
+              </ul>
+              <a class="button button-outline" href="#cuidado-personal">Explorar Cuidado personal <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="home-guide" aria-labelledby="guide-moda-title">
+            <a class="guide-photo" href="#moda" data-guide-photo="producto-pos-155" aria-label="Ver catálogo de Moda">
+              <span class="guide-label">Moda</span>
+            </a>
+            <div class="guide-copy">
+              <h3 id="guide-moda-title">¿Buscas algo para estrenar?</h3>
+              <p>Explora prendas para el día a día y gorras de marca en distintos estilos. Elige tu favorita y consulta las opciones por WhatsApp.</p>
+              <ul class="guide-tags" aria-label="Tipos de productos">
+                <li>Ropa</li>
+                <li>Gorras de marca</li>
+              </ul>
+              <a class="button button-outline" href="#moda">Explorar Moda <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="home-guide" aria-labelledby="guide-accesorios-title">
+            <a class="guide-photo" href="#accesorios" data-guide-photo="producto-pos-370" aria-label="Ver catálogo de Accesorios">
+              <span class="guide-label">Accesorios</span>
+            </a>
+            <div class="guide-copy">
+              <h3 id="guide-accesorios-title">¿Te falta ese toque final?</h3>
+              <p>Una cartera, un reloj o una pieza de joyería puede completar tu conjunto. Explora la selección y escríbenos para conocer las opciones disponibles.</p>
+              <ul class="guide-tags" aria-label="Tipos de productos">
+                <li>Carteras</li>
+                <li>Relojes</li>
+                <li>Joyería</li>
+              </ul>
+              <a class="button button-outline" href="#accesorios">Explorar Accesorios <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section info-panel home-personalize" aria-labelledby="design-title">
+        <div>
+          <h2 id="design-title">Tu diseño o el nuestro, tú eliges</h2>
+          <p>Personaliza camisas, tazas o termos con un diseño que ya tengas o con una idea que quieras crear.</p>
+        </div>
+        <ul class="personalize-options">
+          <li><h3>Traes tu diseño</h3><p>Envíanos tu logo, foto o arte por WhatsApp y lo adaptamos al producto.</p></li>
+          <li><h3>Lo diseñamos juntos</h3><p>Cuéntanos tu idea, tu frase o tus colores y creamos el diseño contigo.</p></li>
+          <li><h3>Lo estampamos</h3><p>Confirmamos el diseño contigo y lo estampamos en el producto que elijas.</p></li>
+        </ul>
+        <a class="button" href="https://wa.me/50497479719?text=Hola%2C%20quiero%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer">Quiero personalizar <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <section class="section" aria-labelledby="order-title">
+        <h2 id="order-title" class="home-section-title">Cómo hacer tu pedido</h2>
+        <ol class="order-steps">
+          <li><h3>Elige una categoría</h3><p>Abre la ficha del producto que te interesa.</p></li>
+          <li><h3>Toca «Consultar»</h3><p>WhatsApp se abre con el nombre del producto en el mensaje.</p></li>
+          <li><h3>Te respondemos</h3><p>Confirmamos el precio, la disponibilidad y las opciones de envío.</p></li>
+        </ol>
+      </section>
+
+      <section class="section info-panel home-help" aria-labelledby="home-help-title">
+        <div>
+          <h2 id="home-help-title">¿No encuentras lo que buscas?</h2>
+          <p>Escríbenos y te ayudamos a encontrarlo.</p>
+        </div>
+        <a class="button" href="https://wa.me/50497479719?text=Hola%2C%20busco%20un%20producto.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" rel="noopener noreferrer">Chatear ahora <span aria-hidden="true">↗</span></a>
+      </section>
+      <a class="button home-chat" href="https://wa.me/50497479719" target="_blank" rel="noopener noreferrer" aria-label="Chatear con Variedades Shaddai por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
     </div>
 
     <section class="catalog-page" id="sublimacion" data-view aria-labelledby="sublimacion-title">
@@ -1435,6 +1795,11 @@
     const home = document.getElementById('inicio');
     const views = new Map([...main.querySelectorAll('[data-view]')].map(view => [view.id, view]));
     const products = new Map([...main.querySelectorAll('[data-product]')].map(product => [product.id, product]));
+
+    for (const preview of home.querySelectorAll('[data-guide-photo]')) {
+      const photo = products.get(preview.dataset.guidePhoto)?.querySelector('img');
+      if (photo) preview.prepend(photo.cloneNode());
+    }
     const sections = new Map(['catalogo', 'envios'].map(id => [id, document.getElementById(id)]));
     const navLinks = document.querySelectorAll('.site-nav a');
 
@@ -1456,12 +1821,13 @@
     const toggle = controls.querySelector('.toggle');
     const toggleLabel = toggle.querySelector('.toggle-label');
     const motion = matchMedia('(prefers-reduced-motion: reduce)');
-    let paused = false;
+    let paused = motion.matches;
     let hovered = false;
     let focused = false;
     let touchOrigin = null;
     let inView = !('IntersectionObserver' in window);
     let timer;
+    let goldOutline;
 
     function makeCard(product) {
       const card = document.createElement('li');
@@ -1498,6 +1864,98 @@
       return order;
     }
 
+
+    const holidayMotifs = [
+      // Pine sprigs and bulbs.
+      '<path d="M1 13q8 1 18-8M4 12l2-5m2 4 3-6m1 4 4-5M5 13l4 3m0-5 4 3m0-5 4 2" stroke="FOREST" fill="none"/><circle cx="5" cy="16" r="1.55" fill="ACCENT"/><circle cx="14" cy="12" r="1.45" fill="GOLD"/>',
+      // A small string of lights.
+      '<path d="M0 5q5 6 10 1t10 0M4 7v3m6-4v3m6-4v3" stroke="FOREST" fill="none"/><path d="M2 12a2 2 0 0 1 4 0l-2 4Zm6-1a2 2 0 0 1 4 0l-2 4Zm6-1a2 2 0 0 1 4 0l-2 4Z" fill="ACCENT"/><circle cx="10" cy="11" r="1.4" fill="GOLD"/>',
+      // Ornaments.
+      '<path d="M7 1v5m8 0V3" stroke="FOREST"/><circle cx="7" cy="11" r="4.7" fill="ACCENT"/><circle cx="15" cy="13" r="3.6" fill="GOLD"/><path d="M4 11q3-3 6 0m3 2h4" stroke="#fff8e9" fill="none"/>',
+      // Snowflake.
+      '<path d="M10 2v16M3 6l14 8M3 14l14-8M7.5 3.5 10 6l2.5-2.5m-5 13L10 14l2.5 2.5M3.5 9 7 8l-.5-3.5M13.5 15.5 13 12l3.5-1M3.5 11 7 12l-.5 3.5m7-11L13 8l3.5 1" fill="none" stroke="ACCENT"/><circle cx="10" cy="10" r="1.4" fill="GOLD"/>',
+      // Wrapped present.
+      '<rect x="3" y="8" width="14" height="9" rx="1.2" fill="ACCENT"/><path d="M10 17V7m-7 4h14M10 7c-6 0-6-6-2-3l2 3c6 0 6-6 2-3Z" fill="none" stroke="GOLD"/>',
+      // Holly.
+      '<path d="M10 11C3 12 2 7 2 4q3 2 5 1l1 2q3 0 2 4Zm0 0q1-6 7-8-1 3 1 5l-2 1q-1 3-6 2Zm0 0q-2 5-8 6 2-2 1-4l3-1Z" fill="FOREST"/><circle cx="11" cy="12" r="2" fill="ACCENT"/><circle cx="14" cy="13" r="1.65" fill="ACCENT"/><circle cx="11.6" cy="15" r="1.55" fill="GOLD"/>',
+      // Candy canes.
+      '<path d="m5 17 3-11a3 3 0 0 1 5.8 1.5L13 10m-1 6 4-11a2.4 2.4 0 0 1 3.8 2.8" fill="none" stroke="ACCENT" stroke-width="2.8"/><path d="m6 12 1.8 1m-.7-5 1.7 1m.3-4 1.3 1.5m3 6.5 1.6 1m-.6-5 1.6 1" stroke="#fff8e9"/>',
+      // Bell and bow.
+      '<path d="M5 12c2-1 1-7 5-7s3 6 5 7v1H5Z" fill="GOLD"/><circle cx="10" cy="15" r="1.45" fill="GOLD"/><path d="M10 5C4 6 4 0 7 2l3 3c6 1 6-5 3-3Z" fill="ACCENT"/>',
+      // Stars.
+      '<path d="m10 1 2.3 5.6 6 .5-4.6 4 1.4 5.9-5.1-3.2L4.9 17l1.4-5.9-4.6-4 6-.5Z" fill="GOLD" stroke="ACCENT"/><circle cx="17" cy="17" r="1.1" fill="ACCENT"/>',
+      // Christmas tree.
+      '<path d="m10 2 4 5h-2l4 4h-2l4 4H2l4-4H4l4-4H6Z" fill="FOREST"/><path d="M10 15v3" stroke="FOREST"/><path d="M10 1v3m-1.5-1.5h3" stroke="GOLD"/><circle cx="8" cy="8" r="1" fill="ACCENT"/><circle cx="12" cy="11" r="1" fill="GOLD"/><circle cx="7" cy="13" r="1" fill="ACCENT"/>',
+    ];
+    const holidayPalettes = [
+      ['#416349', '#ba5259', '#e6b85c'],
+      ['#537d6c', '#5d8da4', '#e4c079'],
+      ['#50705e', '#a95577', '#dfa653'],
+      ['#536e4e', '#b16a48', '#edbd58'],
+      ['#46685e', '#7469a0', '#e2c17d'],
+      ['#4e745e', '#628f77', '#dfac5f'],
+      ['#52794f', '#a94450', '#e6a35a'],
+    ];
+    const holidayLayouts = [
+      [112, -17], [112, 16], [122, -10], [122, 18], [132, -22],
+      [132, 11], [142, -15], [142, 21], [152, -6], [152, 14],
+    ];
+
+    function holidayOrder() {
+      let order = shuffled(holidayMotifs.map((_, index) => index));
+      try {
+        const storageKey = 'shaddai.holidayMotifs';
+        const previous = JSON.parse(sessionStorage.getItem(storageKey) || '[]');
+        if (Array.isArray(previous) && new Set(previous).size === order.length &&
+            previous.length === order.length && previous.every(index => order.includes(index))) {
+          // Rotating the previous order gives every slot a different motif after a reload.
+          const offset = 1 + Math.floor(Math.random() * (order.length - 1));
+          order = [...previous.slice(offset), ...previous.slice(0, offset)];
+        }
+        sessionStorage.setItem(storageKey, JSON.stringify(order));
+      } catch {
+        // The page also works when storage is unavailable for local files.
+      }
+      return order;
+    }
+
+    function makeHolidayDecoration(motif, [forest, accent, gold]) {
+      const colors = {FOREST: forest, ACCENT: accent, GOLD: gold};
+      const art = motif.replace(/FOREST|ACCENT|GOLD/g, color => colors[color]);
+      const ribbon = '<svg xmlns="http://www.w3.org/2000/svg" width="128" height="26" viewBox="0 0 128 26">' +
+        '<defs><g id="decoration" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">' + art + '</g></defs>' +
+        '<path d="M0 16Q16 6 32 16T64 16T96 16T128 16" fill="none" stroke="' + forest + '" opacity=".28"/>' +
+        '<g fill="' + gold + '"><circle cx="3" cy="16" r="1.1"/><circle cx="48" cy="19" r="1.2"/><circle cx="117" cy="11" r="1"/></g>' +
+        '<use href="#decoration" transform="translate(12 5) scale(.8)"/>' +
+        '<use href="#decoration" transform="translate(54 2)"/>' +
+        '<use href="#decoration" transform="translate(97 6) scale(.74)"/></svg>';
+      return 'url("data:image/svg+xml,' + encodeURIComponent(ribbon) + '")';
+    }
+
+    // Reuse each motif and palette image across widths and offsets.
+    const holidayImages = holidayOrder().map(motif =>
+      holidayPalettes.map(palette => makeHolidayDecoration(holidayMotifs[motif], palette))
+    );
+    const holidayCombinations = holidayPalettes.flatMap((_, palette) =>
+      holidayLayouts.map(([width, shift]) => ({palette, width, shift}))
+    );
+    const holidayDecks = holidayImages.map(() => shuffled(holidayCombinations));
+
+    function applyHolidayDecoration(element, slot) {
+      const motif = slot % holidayImages.length;
+      const deck = holidayDecks[motif];
+      const index = Math.floor(slot / holidayImages.length) % deck.length;
+      const {palette, width, shift} = deck[index];
+      element.style.setProperty('--holiday-decoration', holidayImages[motif][palette]);
+      element.style.setProperty('--holiday-width', width + 'px');
+      element.style.setProperty('--holiday-shift', shift + 'px');
+    }
+
+    const holidayPanels = document.querySelectorAll(
+      '.holiday-garland, .hero, .category-link, .info-panel, .product, .catalog-header, .benefit, .home-guide, .order-steps li'
+    );
+    holidayPanels.forEach(applyHolidayDecoration);
+
     function fillTrack() {
       // Show a sample of each category before continuing in random order.
       const order = shuffled(featured);
@@ -1513,8 +1971,14 @@
           first.push(product);
         }
       }
-      track.replaceChildren(...first.map(makeCard), ...remaining.map(makeCard));
-      track.scrollTo({ left: 0, behavior: 'instant' });
+      const cards = [...first, ...remaining].map((product, index) => {
+        const card = makeCard(product);
+        applyHolidayDecoration(card.firstElementChild, holidayPanels.length + index);
+        return card;
+      });
+      track.textContent = '';
+      track.append(...cards);
+      track.scrollLeft = 0;
       syncControls();
     }
 
@@ -1537,14 +2001,22 @@
       toggle.toggleAttribute('data-paused', paused);
       toggleLabel.textContent = paused ? 'Reanudar' : 'Pausar';
       toggle.setAttribute('aria-label', paused ? 'Reanudar el movimiento automático' : 'Pausar el movimiento automático');
-      if (paused && stopScrolling) track.scrollTo({ left: track.scrollLeft, behavior: 'instant' });
+      if (paused && stopScrolling) {
+        // Setting the current position cancels any smooth scroll in progress.
+        track.scrollLeft = track.scrollLeft;
+      }
       setTimer();
     }
 
     function move(step) {
       if (track.children.length < 2) return;
       const distance = track.children[1].offsetLeft - track.children[0].offsetLeft;
-      track.scrollBy({ left: step * distance, behavior: motion.matches ? 'instant' : 'smooth' });
+      const offset = step * distance;
+      if (!motion.matches && 'scrollBehavior' in document.documentElement.style && typeof track.scrollBy === 'function') {
+        track.scrollBy({ left: offset, behavior: 'smooth' });
+      } else {
+        track.scrollLeft += offset;
+      }
     }
 
     function advance() {
@@ -1561,7 +2033,7 @@
       const active = product?.closest('[data-view]') ?? views.get(id) ?? home;
       for (const view of views.values()) view.hidden = view !== active;
 
-      const current = section?.id ?? (active === home || active.id === 'moda' ? active.id : 'catalogo');
+      const current = section?.id === 'envios' ? 'envios' : active.id;
       for (const link of navLinks) {
         if (link.getAttribute('href') === `#${current}`) link.setAttribute('aria-current', current === 'inicio' ? 'page' : 'location');
         else link.removeAttribute('aria-current');
@@ -1572,8 +2044,8 @@
       const destination = product ?? section ?? active;
       const focusTarget = product ?? section?.querySelector('h2') ?? heading;
       if (focusDestination) focusTarget.focus({ preventScroll: true });
-      if (product || section || active !== home) destination.scrollIntoView({ block: 'start' });
-      else if (focusDestination) window.scrollTo(0, 0);
+      if (product || section) destination.scrollIntoView({ block: 'start' });
+      else if (focusDestination || active !== home) window.scrollTo(0, 0);
       focused = track.contains(document.activeElement);
       hovered = matchMedia('(hover: hover)').matches && track.matches(':hover');
       syncControls();
@@ -1624,7 +2096,19 @@
       focused = track.contains(event.relatedTarget);
       setTimer();
     });
-    document.addEventListener('visibilitychange', setTimer);
+    function pauseForReducedMotion(event) {
+      if (event.matches) setPaused(true);
+    }
+    if (motion.addEventListener) motion.addEventListener('change', pauseForReducedMotion);
+    else if (motion.addListener) motion.addListener(pauseForReducedMotion);
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        goldOutline?.remove();
+        goldOutline = undefined;
+      }
+      setTimer();
+    });
     window.addEventListener('resize', () => {
       syncControls();
       setTimer();
@@ -1636,9 +2120,8 @@
       }, { threshold: .2 }).observe(track);
     }
 
-    const goldTargets = '.button, .control, .social-link, .category-link, .feature, .product, .info-panel, .catalog-header';
+    const goldTargets = '.site-nav a, .button, .control, .social-link, .category-link, .feature, .product, .info-panel, .catalog-header, .home-guide, .benefit, .order-steps li';
     const svgNamespace = 'http://www.w3.org/2000/svg';
-    let goldOutline;
 
     document.addEventListener('pointerover', event => {
       if (event.pointerType === 'touch') return;
@@ -1655,10 +2138,11 @@
       outline.setAttribute('viewBox', '0 0 ' + width + ' ' + height);
       outline.setAttribute('preserveAspectRatio', 'none');
 
-      const inset = 1.25;
+      const inset = 2;
       const center = width / 2;
       const top = inset;
       const bottom = height - inset;
+      const middle = height / 2;
       const corner = Math.max(0, Math.min(radius - inset, center - inset, (bottom - top) / 2));
 
       // Each half runs from bottom center to top center. The stroke grows out from its midpoint.
@@ -1666,26 +2150,54 @@
         const edge = side === -1 ? inset : width - inset;
         const turn = edge - side * corner;
         const sweep = side === -1 ? 1 : 0;
+        const upperEdge = [
+          'V', top + corner,
+          'A', corner, corner, 0, 0, sweep, turn, top,
+          'H', center,
+        ];
         const path = [
           'M', center, bottom,
           'H', turn,
           'A', corner, corner, 0, 0, sweep, edge, bottom - corner,
-          'V', top + corner,
-          'A', corner, corner, 0, 0, sweep, turn, top,
-          'H', center,
+          ...upperEdge,
         ].join(' ');
         const line = document.createElementNS(svgNamespace, 'path');
         line.setAttribute('d', path);
         line.setAttribute('pathLength', '100');
         line.setAttribute('class', 'gold-outline-line');
         const tip = line.cloneNode();
+        tip.setAttribute('d', ['M', edge, middle, ...upperEdge].join(' '));
         tip.setAttribute('class', 'gold-outline-tip');
         outline.append(line, tip);
       }
+      const left = inset;
+      const right = width - inset;
+      const orbit = document.createElementNS(svgNamespace, 'path');
+      orbit.setAttribute('d', [
+        'M', center, top,
+        'H', left + corner,
+        'A', corner, corner, 0, 0, 0, left, top + corner,
+        'V', bottom - corner,
+        'A', corner, corner, 0, 0, 0, left + corner, bottom,
+        'H', right - corner,
+        'A', corner, corner, 0, 0, 0, right, bottom - corner,
+        'V', top + corner,
+        'A', corner, corner, 0, 0, 0, right - corner, top,
+        'Z',
+      ].join(' '));
+      orbit.setAttribute('pathLength', '100');
+      orbit.setAttribute('class', 'gold-outline-orbit');
+      outline.append(orbit);
       target.append(outline);
       goldOutline = outline;
+    });
 
-      target.addEventListener('pointerleave', () => outline.remove(), { once: true });
+    document.addEventListener('pointerout', event => {
+      if (!goldOutline || event.pointerType === 'touch') return;
+      const nextTarget = event.relatedTarget?.closest?.(goldTargets);
+      if (nextTarget === goldOutline.parentElement) return;
+      goldOutline.remove();
+      goldOutline = undefined;
     });
 
     document.querySelector('.skip').addEventListener('click', event => {
