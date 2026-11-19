@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-8J+JdJm3U9Nimjl3WR8ntBwYKigS5Fet0Z1wPBxuFe4='; style-src 'sha256-Lq3kiSkVrznRYJahUwUX1l1eWGtbeDuvRwkna0EHJIQ='; script-src-attr 'none'; style-src-attr 'none'; img-src data:; connect-src 'none'; frame-src 'none'; object-src 'none'; worker-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-iFHsPVVHZ58qYbUH2hXV+x59MhguZQO32o0RAtdOyb0='; style-src 'sha256-aXx+SHPGkSEArsClFpq95w89q8ddA9wYSyT0cAsUMJQ='; script-src-attr 'none'; style-src-attr 'none'; img-src data:; connect-src 'none'; frame-src 'none'; object-src 'none'; worker-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Explora el catálogo de Variedades Shaddai en Choluteca, Honduras. Sublimación, moda, arreglos personalizados, piñatería, tecnología, hogar, cuidado personal y accesorios.">
@@ -606,8 +606,7 @@
     .search-results .feature-text { padding-right: 15px; }
     .search-results .feature-text strong { display: block; }
     .search-results .arrow { display: none; }
-    .header-actions { display: flex; align-items: center; justify-content: end; gap: 8px; }
-    .header-actions > .button { white-space: nowrap; border-color: #fff4cc65; }
+    .header-actions { display: flex; align-items: center; justify-content: end; }
     .theme-toggle {
       position: relative;
       display: inline-flex;
@@ -645,7 +644,6 @@
       }
       .site-nav .menu-sparkles .social-sparkle { top: 17px; color: var(--gold-light); }
       .theme-toggle .menu-sparkles .social-sparkle { top: 5px; color: var(--gold-light); }
-      .header-actions > .button { padding-inline: 12px; font-size: .8rem; }
       .theme-toggle { flex-direction: column; gap: 2px; padding: 4px 7px; font-size: .75rem; line-height: 1; }
       .catalog-search { margin-top: 12px; }
       .catalog-search input { padding-inline: 10px; }
@@ -657,11 +655,6 @@
         inset-inline-end: max(12px, env(safe-area-inset-right));
         inset-block-end: max(12px, env(safe-area-inset-bottom));
       }
-    }
-    @media (max-width: 420px) {
-      .header-actions { gap: 5px; }
-      .header-actions > .button { padding-inline: 8px; }
-      .header-actions > .button span { display: none; }
     }
     @media (max-width: 360px) {
       .header-brand .brand-name span { display: block; }
@@ -783,7 +776,6 @@
           <span class="theme-toggle-icon" aria-hidden="true">☾</span>
           <span class="theme-toggle-label">Modo oscuro</span>
         </button>
-        <a class="button" href="https://wa.me/50497479719" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </header>
@@ -3008,7 +3000,7 @@
       showcase.hidden = false;
       controls.hidden = featured.length < 2;
     }
-    setPaused(motion.matches);
+    setPaused(false);
     showRoute(false);
   </script>
 </body>
